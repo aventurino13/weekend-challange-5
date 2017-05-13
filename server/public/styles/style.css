@@ -1,0 +1,38 @@
+body {
+  text-align: center;
+  font-family: 'Unica One', cursive;
+  background-color:#A1A194;
+  color: #FFB03B;
+  border-bottom: solid 2em #FFB03B;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+.character{
+  background-color: #10222B;
+  padding: 3em;
+  margin: 2em 3em 2em 3em;
+  border: dotted 0.3em #91BED4;
+}
+
+h1{
+  font-size: 5em;
+}
+
+h2 {
+  font-size: 3em;
+  color: #10222B;
+}
+
+h3 {
+  font-size: 2em;
+}
+
+button{
+  font-size: 1.5em;
+  border-radius: 0.4em;
+  background-color: #91BED4;
+  color: #10222B;
+  border-color: #10222B;
+  border-width: thick;
+}

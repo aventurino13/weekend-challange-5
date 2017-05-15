@@ -1,5 +1,4 @@
 body {
-  text-align: center;
   font-family: 'Unica One', cursive;
   background-color:#A1A194;
   color: #FFB03B;
@@ -10,8 +9,6 @@ body {
 
 .card{
   background-color: #10222B;
-  padding: 3em;
-  margin: 2em ;
   border: dotted 0.3em #91BED4;
 }
 

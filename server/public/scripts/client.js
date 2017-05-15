@@ -58,15 +58,18 @@ myApp.controller('FavMov', function ( $http ){
 
   var vm = this;
 
-  vm.getFav = function (){
+  vm.getFav = function (id){
   $http({
     method: 'GET',
-    url: '/favorites',
+    url: '/favorites/' + id,
   }).then( function success( response ) {
     console.log(response);
     console.log(response.data);
     vm.favMovie = response.data;
   });
 };
+
+
+
 
 });

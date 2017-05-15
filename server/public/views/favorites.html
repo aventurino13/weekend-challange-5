@@ -1,0 +1,12 @@
+<div ng-controller = "FavMov as x" ng-init = 'x.getFav()'>
+  <div class='container row'>
+  <div ng-repeat='thing in x.favMovie' class='col-sm-4'>
+    <div class = "card">
+      <h3>{{ thing.title }}</h3>
+      <h3>{{ thing.year }}</h3>
+      <img src= "{{thing.poster}}"/>
+      <!-- <button ng-click='x.addFav(thing)'>Remove</button> -->
+    </div>
+  </div>
+</div>
+</div>

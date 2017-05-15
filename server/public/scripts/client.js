@@ -1,8 +1,24 @@
 var myApp = angular.module('myApp',  ['ngRoute']);
 
-myApp.config(function($routeProvider){
-  
-})
+myApp.config(function($routeProvider, $locationProvider){
+  $routeProvider.when('/', {
+    template:'<div> THis is the devault</div>',
+    controller:'DefaultController as defCtrl'
+  }).when('/search', {
+    templateUrl : 'views/search.html',
+    controller :'SearchMov as Ctrl'
+  }).when('/favorites', {
+    templateUrl : 'views/favorites.html',
+    controller:'FavMov as fav',
+  }).otherwise('/');
+
+  $locationProvider.html5Mode(true);
+
+});
+
+myApp.controller('DefaultController', function() {
+  console.log('DefaultController loaded');
+});
 
 myApp.controller('SearchMov', function ($http, GetMov ){
   console.log('NG');
@@ -15,6 +31,8 @@ myApp.controller('SearchMov', function ($http, GetMov ){
       vm.result = data;
     });//end .then funct
   };//end submit funciton
+
+
 
   vm.addFav = function (y) {
     console.log(y);
@@ -34,3 +52,21 @@ myApp.controller('SearchMov', function ($http, GetMov ){
   };//end addFave
 
 });//end controller
+
+myApp.controller('FavMov', function ( $http ){
+  console.log('NG');
+
+  var vm = this;
+
+  vm.getFav = function (){
+  $http({
+    method: 'GET',
+    url: '/favorites',
+  }).then( function success( response ) {
+    console.log(response);
+    console.log(response.data);
+    vm.favMovie = response.data;
+  });
+};
+
+});

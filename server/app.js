@@ -40,6 +40,19 @@ app.post('/favorites', function ( req, res ){
 });// end post
 
 
+app.get('/favorites', function ( req, res ){
+  console.log('in get favorites GET route');
+    movies.find().then(function( data ) {
+      console.log( data );
+      res.send( data );
+    }); // end find all
+}); // favorites GET
+
+app.get( '/*', function( req, res ){
+  res.sendFile( path.resolve( './server/public/views/index.html' ) );
+});
+
+
 app.listen( port, function() {
   console.log( 'server up on:', port );
 });

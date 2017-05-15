@@ -1,8 +1,8 @@
 <div ng-controller = "FavMov as x" ng-init = 'x.getFav()'>
   <div class='container row'>
   <div ng-repeat='thing in x.favMovie' class='col-sm-4'>
-    <div class = "card">
-      <h3>{{ thing.title }}</h3>
+    <div class = "card" class='col-sm-4'>
+      <h2>{{ thing.title }}</h3>
       <h3>{{ thing.year }}</h3>
       <img src= "{{thing.poster}}"/>
       <button ng-click='x.getFav(thing._id)'>Remove Favorite</button>

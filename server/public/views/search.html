@@ -3,7 +3,7 @@
   <button ng-click='x.submit(x.movieIn)'>Search</button>
   <div class='container row'>
   <div ng-repeat='thing in x.result' class='col-sm-4'>
-    <div class = "card">
+    <div class = "card" class='col-sm-4'>
       <h3>{{ thing.Title }}</h3>
       <h3>{{ thing.Year }}</h3>
       <img src= "{{thing.Poster}}"/>

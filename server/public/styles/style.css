@@ -1,24 +1,30 @@
 body {
-  font-family: 'Unica One', cursive;
-  background-color:#A1A194;
-  color: #FFB03B;
-  border-bottom: solid 2em #FFB03B;
-  padding-top: 1em;
-  padding-bottom: 1em;
+  font-family: 'Julius Sans One', sans-serif;
+  background-color:#41505E;
+  color: #569492;
+  padding-right: 20px;
 }
 
 .card{
-  background-color: #10222B;
-  border: dotted 0.3em #91BED4;
+  padding: 10px;
+  margin: 10px;
+  background-color: #383245;
+  border: solid 0.1em #A4BAA2;
+}
+
+nav {
+  background-color: #DFE0AF;
+  font-size: 1.5em;
+  color: #383245;
 }
 
 h1{
-  font-size: 5em;
+  font-size: 7em;
 }
 
 h2 {
   font-size: 3em;
-  color: #10222B;
+  color: #569492;
 }
 
 h3 {
@@ -28,8 +34,13 @@ h3 {
 button{
   font-size: 1.5em;
   border-radius: 0.4em;
-  background-color: #91BED4;
+  background-color: #A4BAA2;
   color: #10222B;
   border-color: #10222B;
   border-width: thick;
+}
+
+img{
+  height: 300px;
+  width: 200px;
 }

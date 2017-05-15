@@ -30,6 +30,7 @@ myApp.controller('SearchMov', function ($http, GetMov ){
       console.log('in .then return: ', data);
       vm.result = data;
     });//end .then funct
+    vm.movieIn='';
   };//end submit funciton
 
 
